@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+  <ul class="row list-group">
+    <% skills.forEach(function(s) { %>
+      <li class ="list-group-item col-sm-12 col-md-10 col-lg-8">
+        <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+          - 
+        <%= s.learnt ? 'learnt' : 'to learn' %>
+      </li>
+    <% }); %>
+  </ul>
+
+<%- include('../partials/footer') %>

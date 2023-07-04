@@ -1,8 +1,28 @@
+* {
+  /* border: 1px solid red; */
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 5vmin;
+  font: 5vmin "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: white;
+}
+
+.header {
+  padding: 2vh 0;
+}
+
+/* nav {
+  background-color: lightsalmon;
+  height: 7vh;
+  /* width: 100%;
+  margin: 0; 
+}*/
+
+
+footer {
+  padding: 2vh 0;
 }
