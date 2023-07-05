@@ -1,8 +1,10 @@
 <%- include('../partials/header') %>
 
   <h3><%= skill.skill %></h3>
-  <h3>Learnt: <%= skill.learnt ? 'Yes' : 'Not yet'; %></h3>
+  <h4>Topic covered? <%= skill.learnt ? 'Yes' : 'Not yet'; %></h4>
 
-  <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+  <a href="/skills/<%= skill.id %>/edit">
+    <button type="button submit" class="btn btn-dark">Edit Skill</button>
+  </a>
 
 <%- include('../partials/footer') %>

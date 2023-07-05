@@ -2,7 +2,7 @@
 
   <ul class="list-group">
     <% skills.forEach(function(s) { %>
-      <a href="/skills/<%= s.id %>" >
+      <a href="/skills/<%= s.id %>" class="text-decoration-none">
         <li class ="list-group-item list-group-item-action <%= s.learnt ? 'list-group-item-success' : 'list-group-item-light' %> col-sm-12 col-md-10 col-lg-8">
           <form 
           action="/skills/<%= s.id %>?_method=DELETE"
@@ -12,16 +12,17 @@
           <button type="submit" class="btn-close" aria-label="Close"></button>
           </form>
           <%= s.skill %>
-            - 
-          <!-- <p class =""> -->
-            <%= s.learnt ? 'learnt' : 'to learn' %>
-          <!-- </p> -->
+          - 
+          <%= s.learnt ? 'learnt' : 'to learn' %>
         </li>
       </a>
     <% }); %>
   </ul>
   <br>
 
-  <a href="/skills/new">Add a Skill</a>
+  <a href="/skills/new">
+    <button type="button" class="btn btn-dark">Add a Skill</button>
+  </a>
+  
 
 <%- include('../partials/footer') %>
