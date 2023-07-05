@@ -20,3 +20,10 @@ a {
 footer {
   padding: 2vh 0;
 }
+
+
+.delete-form {
+  display: inline-block;
+  margin-right: 1.5vmin;
+}
+	

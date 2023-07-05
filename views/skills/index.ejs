@@ -1,13 +1,27 @@
 <%- include('../partials/header') %>
 
-  <ul class="row list-group">
+  <ul class="list-group">
     <% skills.forEach(function(s) { %>
-      <li class ="list-group-item col-sm-12 col-md-10 col-lg-8">
-        <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-          - 
-        <%= s.learnt ? 'learnt' : 'to learn' %>
-      </li>
+      <a href="/skills/<%= s.id %>" >
+        <li class ="list-group-item list-group-item-action <%= s.learnt ? 'list-group-item-success' : 'list-group-item-light' %> col-sm-12 col-md-10 col-lg-8">
+          <form 
+          action="/skills/<%= s.id %>?_method=DELETE"
+          method="POST"
+          class="delete-form"
+          >
+          <button type="submit" class="btn-close" aria-label="Close"></button>
+          </form>
+          <%= s.skill %>
+            - 
+          <!-- <p class =""> -->
+            <%= s.learnt ? 'learnt' : 'to learn' %>
+          <!-- </p> -->
+        </li>
+      </a>
     <% }); %>
   </ul>
+  <br>
+
+  <a href="/skills/new">Add a Skill</a>
 
 <%- include('../partials/footer') %>
